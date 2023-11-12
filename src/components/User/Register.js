@@ -31,7 +31,7 @@ const Register = () => {
       password: password,
     };
 
-    const registerUser = await fetch(`http://localhost:5000/auth/signup`, {
+    const registerUser = await fetch(`https://expensetracker-backend-fy7b.onrender.com/auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Use "Content-Type" with a capital 'C'

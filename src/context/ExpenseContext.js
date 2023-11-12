@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 export const ExpenseContext = createContext();
 
-const host = "http://localhost:5000/"; // API endpoint
+const host = "https://expensetracker-backend-fy7b.onrender.com/"; // API endpoint
 const formatDate = (date) => {
   const formattedDate = new Date(date);
   return `${formattedDate.getUTCFullYear()}-${(formattedDate.getUTCMonth() + 1)
