@@ -1,0 +1,122 @@
+
+  
+  .title {
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title a{
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 10px;
+
+  }
+  .title a:hover{
+    color: #A020F0;
+  }
+
+  .form-container {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .form-label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .form-input:focus, .select-input:focus{
+    outline: none;
+  }
+  
+  .select-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  .submit-button {
+    background-color: #A020F0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* ExpenseForm.css */
+
+/* ... Other styles ... */
+
+.select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-size: 20px; /* Adjust the arrow icon size */
+  color: #333; /* Text color */
+  cursor: pointer;
+}
+
+/* Style for the arrow icon */
+.select-input::after {
+  content: '\25BC'; /* Unicode character for a down arrow */
+  position: absolute;
+  top: 0;
+  right: 10px; /* Adjust the position of the arrow icon */
+  font-size: 16px; /* Adjust the arrow icon size */
+  line-height: 40px; /* Adjust the line height to center the arrow */
+  color: #333; /* Arrow color */
+  pointer-events: none; /* Prevent the arrow from being clickable */
+}
+
+.select-input:focus {
+  border-color: #A020F0; /* Adjust the border color on focus */
+}
+
+
+/* ExpenseTable.css */
+
+
+.expense-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+.expense-table th,
+.expense-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.expense-table th{
+  background-color: #f2f2f2;
+}
+
+/* Apply theme color to the pencil icon */
+.expense-table .fa-pencil {
+  color: #A020F0;
+  cursor: pointer;
+}

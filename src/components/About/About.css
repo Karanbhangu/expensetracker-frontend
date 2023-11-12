@@ -1,0 +1,27 @@
+.about-us{
+    padding: 15vh 20px 20px 40px;
+    width: 80%;
+}
+.about-us p:nth-child(1), .purple{
+    color: #A020F0;
+}
+.about-us h2{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.about-us h3{
+    color: rgba(0, 0, 0, 0.9);
+}
+.about-us h3 ul{
+    list-style: none;
+}
+@media only screen and (max-width:700px){
+    .about-us{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:500px) {
+    .about-us{
+        width: 98%;
+    }
+}

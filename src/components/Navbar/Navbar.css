@@ -1,0 +1,227 @@
+/* Add your other styles */
+
+.transparent-navbar {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.scrolled-navbar {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s;
+}
+
+/* Common Styles for Both Desktop and Mobile */
+nav {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+}
+.lefty h1 {
+  font-family: "Space Grotesk", sans-serif;
+}
+.lefty a{
+  text-decoration: none;
+  color: #000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #a020f0;
+}
+
+.lefty h1 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link:hover {
+  transform: translateY(-3%);
+}
+
+.repairPic {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 5px;
+}
+/* Desktop Navbar Styles */
+.righty {
+  margin-left: 40px;
+}
+
+.righty-end a {
+  text-decoration: none;
+  padding: 5px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Mobile Menu Icon Styles */
+.righty-mobile {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styles */
+.mobile-Menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 9vh;
+  height: 90vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  margin-top: 10px;
+  width: 100%;
+  transform: translateX(100%);
+  transition: all 0.2s;
+}
+
+.mobile-Menu.open {
+  transform: translateX(0);
+}
+
+.mobile-Menu ul {
+  height: 100%;
+  display: flex;
+  font-size: large;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.mobile-Menu ul li:nth-child(1) {
+  margin-top: 10%;
+}
+
+.mobile-Menu ul li {
+  margin: 20px 0;
+}
+
+.mobile-Menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: x-large;
+}
+.righty-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.righty-end a {
+  color: #000;
+  font-weight: bold;
+  margin: 5px;
+  padding: 9px;
+}
+.righty-end a:nth-child(1):hover {
+  color: #a020f0;
+}
+.righty-end a:nth-child(2) {
+  background-color: #a020f0;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+}
+.righty-end a:nth-child(2):hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15); /* New box shadow on hover */
+}
+/* Mobile Menu Icon Bar Styles */
+.bar {
+  height: 3px;
+  background-color: #a020f0;
+  margin: 2px;
+  transition: width 0.3s, transform 0.3s;
+}
+
+.bar:nth-child(1) {
+  width: 30px;
+}
+
+.bar:nth-child(2) {
+  width: 50px;
+}
+
+.bar:nth-child(3) {
+  width: 35px;
+}
+
+.righty-mobile.open .bar:nth-child(2) {
+  width: 0px;
+  height: 0px;
+  margin: 0;
+}
+
+.righty-mobile.open .bar:nth-child(1),
+.righty-mobile.open .bar:nth-child(3) {
+  width: 40px;
+}
+
+.righty-mobile.open .bar:nth-child(1) {
+  transform: translateY(140%) translateX(-1%) rotate(45deg);
+}
+
+.righty-mobile.open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.logout-button {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px;
+}
+/* Media Query for Mobile */
+@media only screen and (max-width: 1000px) {
+  .righty {
+    display: none;
+  }
+
+  .righty-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all 0.2s;
+  }
+
+  .mobile-Menu {
+    display: block;
+    z-index: 1;
+  }
+
+  .righty-end {
+    display: none;
+  }
+  .logout-button {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+}
